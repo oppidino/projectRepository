@@ -18,6 +18,11 @@
 
 <items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			xsi:noNamespaceSchemaLocation="items.xsd">
+			
+		<collectiontypes>
+			<collectiontype code="DriverList" elementtype="Driver" autocreate="true" type="list"/>
+		</collectiontypes>
+		
 		<enumtypes>
 	        <enumtype code="TypeEnum" autocreate="true" generate="true" dynamic="false">
 	            <value code="CAR"/>
@@ -44,8 +49,6 @@
 		    </relation>
 		</relations>
 		
-		<collectiontype code="DriverList" elementtype="Driver" autocreate="true" type="list"/>
-	
 		<itemtypes>
 	        <itemtype code="Vehicle" generate="true" autocreate="true">
 	            <deployment table="Vehicle" typecode="10501" />
