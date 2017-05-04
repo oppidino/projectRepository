@@ -11,12 +11,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import it.cocacola.championship.daos.VehicleDao;
+import it.cocacola.championship.daos.VehicleDAO;
 import it.cocacola.championship.model.VehicleModel;
 
 
 @Component(value = "vehicleDAO")
-public class DefaultVehicleDao implements VehicleDao
+public class DefaultVehicleDao implements VehicleDAO
 {
 
 	@Autowired

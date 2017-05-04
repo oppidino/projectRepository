@@ -5,7 +5,7 @@ import java.util.List;
 import it.cocacola.championship.model.StableModel;
 
 
-public interface StableDao
+public interface StableDAO
 {
 	List<StableModel> findStables();
 

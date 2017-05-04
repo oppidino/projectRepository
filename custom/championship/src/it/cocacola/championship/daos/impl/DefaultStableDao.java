@@ -8,12 +8,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import it.cocacola.championship.daos.StableDao;
+import it.cocacola.championship.daos.StableDAO;
 import it.cocacola.championship.model.StableModel;
 
 
 @Component(value = "stableDAO")
-public class DefaultStableDao implements StableDao
+public class DefaultStableDao implements StableDAO
 {
 	@Autowired
 	private FlexibleSearchService flexibleSearchService;

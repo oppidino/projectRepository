@@ -8,7 +8,7 @@ import java.util.List;
 import it.cocacola.championship.model.VehicleModel;
 
 
-public interface VehicleDao
+public interface VehicleDAO
 {
 	List<VehicleModel> findVehicles();
 
