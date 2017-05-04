@@ -36,6 +36,9 @@
         <property name="raceChampionshipDAO" ref="raceChampionshipDAO"/>
     </bean>
 	
-			
+	<alias name="defaultStableService" alias="stableService"/>
+    <bean id="defaultStableService" class="it.cocacola.championship.services.impl.DefaultStableService">
+        <property name="stableDAO" ref="stableDAO"/>
+    </bean>		
 			
 </beans>

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Required;
 
 import it.cocacola.championship.daos.DriverDAO;
 import it.cocacola.championship.model.DriverModel;
+import it.cocacola.championship.model.VehicleModel;
 import it.cocacola.championship.services.DriverService;
 
 
@@ -31,9 +32,26 @@ public class DefaultDriverService implements DriverService
 		return result.get(0);
 	}
 
+	@Override
+	public DriverModel getDriversForVehicle(final VehicleModel vehicle) throws AmbiguousIdentifierException, UnknownIdentifierException
+	{
+		final List<DriverModel> result = driverDAO.findDriversByVehicle(vehicle);
+		if (result.isEmpty())
+		{
+			throw new UnknownIdentifierException("Driver with vehicle '" + vehicle + "' not found!");
+		}
+		else if (result.size() > 1)
+		{
+			throw new AmbiguousIdentifierException(
+					"Driver vehicle '" + vehicle + "' is not unique, " + result.size() + " drivers found!");
+		}
+		return result.get(0);
+	}
+
 	@Required
 	public void setDriverDAO(final DriverDAO driverDAO)
 	{
 		this.driverDAO = driverDAO;
 	}
+
 }
