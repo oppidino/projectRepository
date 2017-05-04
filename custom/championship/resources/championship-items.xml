@@ -147,6 +147,14 @@
 	                    <description>Name</description>
 	                    <persistence type="property" />
 	                </attribute>
+	                <attribute qualifier="stableRanking" type="StableRanking">
+	                    <description>Stable Ranking</description>
+	                    <persistence type="property" />
+	                </attribute>
+	                <attribute qualifier="driverRanking" type="DriverRanking">
+	                    <description>Driver Ranking</description>
+	                    <persistence type="property" />
+	                </attribute>
 	            </attributes>
 	    	</itemtype>
 	    	
@@ -256,10 +264,6 @@
 	                    <persistence type="property" />
 	                    <modifiers optional="false" unique="true"/>	                    
 	                </attribute>
-	                <attribute qualifier="raceChampionship" type="RaceChampionship">
-	                    <description>Race Championship</description>
-	                    <persistence type="property" />
-	                </attribute>
 		  		</attributes> 	
 		    </itemtype>
 	    	
@@ -270,10 +274,6 @@
 	                    <description>Code</description>
 	                    <persistence type="property" />
 	                    <modifiers optional="false" unique="true"/>	                    
-	                </attribute>
-	                <attribute qualifier="raceChampionship" type="RaceChampionship">
-	                    <description>Race Championship</description>
-	                    <persistence type="property" />
 	                </attribute>
 		  		</attributes> 	
 		    </itemtype>

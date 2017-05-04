@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 22.07.30                         ---
+ * --- Generated at 4-mag-2017 23.00.27                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.constants;

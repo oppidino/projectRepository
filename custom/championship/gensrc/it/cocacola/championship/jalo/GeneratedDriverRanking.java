@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 22.07.30                         ---
+ * --- Generated at 4-mag-2017 23.00.27                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -13,7 +13,6 @@ import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.util.OneToManyHandler;
 import it.cocacola.championship.constants.ChampionshipConstants;
 import it.cocacola.championship.jalo.DriverEntry;
-import it.cocacola.championship.jalo.RaceChampionship;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,8 +26,6 @@ public abstract class GeneratedDriverRanking extends GenericItem
 {
 	/** Qualifier of the <code>DriverRanking.code</code> attribute **/
 	public static final String CODE = "code";
-	/** Qualifier of the <code>DriverRanking.raceChampionship</code> attribute **/
-	public static final String RACECHAMPIONSHIP = "raceChampionship";
 	/** Qualifier of the <code>DriverRanking.driversEntry</code> attribute **/
 	public static final String DRIVERSENTRY = "driversEntry";
 	/**
@@ -48,7 +45,6 @@ public abstract class GeneratedDriverRanking extends GenericItem
 	{
 		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
 		tmp.put(CODE, AttributeMode.INITIAL);
-		tmp.put(RACECHAMPIONSHIP, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
 	@Override
@@ -163,42 +159,6 @@ public abstract class GeneratedDriverRanking extends GenericItem
 	public void removeFromDriversEntry(final DriverEntry value)
 	{
 		removeFromDriversEntry( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>DriverRanking.raceChampionship</code> attribute.
-	 * @return the raceChampionship - Race Championship
-	 */
-	public RaceChampionship getRaceChampionship(final SessionContext ctx)
-	{
-		return (RaceChampionship)getProperty( ctx, RACECHAMPIONSHIP);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>DriverRanking.raceChampionship</code> attribute.
-	 * @return the raceChampionship - Race Championship
-	 */
-	public RaceChampionship getRaceChampionship()
-	{
-		return getRaceChampionship( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>DriverRanking.raceChampionship</code> attribute. 
-	 * @param value the raceChampionship - Race Championship
-	 */
-	public void setRaceChampionship(final SessionContext ctx, final RaceChampionship value)
-	{
-		setProperty(ctx, RACECHAMPIONSHIP,value);
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>DriverRanking.raceChampionship</code> attribute. 
-	 * @param value the raceChampionship - Race Championship
-	 */
-	public void setRaceChampionship(final RaceChampionship value)
-	{
-		setRaceChampionship( getSession().getSessionContext(), value );
 	}
 	
 }
