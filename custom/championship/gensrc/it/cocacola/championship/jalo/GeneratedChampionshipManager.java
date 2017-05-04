@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 17.16.02                         ---
+ * --- Generated at 4-mag-2017 22.07.30                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -16,10 +16,14 @@ import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import it.cocacola.championship.constants.ChampionshipConstants;
 import it.cocacola.championship.jalo.Driver;
+import it.cocacola.championship.jalo.DriverEntry;
+import it.cocacola.championship.jalo.DriverRanking;
 import it.cocacola.championship.jalo.GranPrix;
 import it.cocacola.championship.jalo.Placing;
 import it.cocacola.championship.jalo.RaceChampionship;
 import it.cocacola.championship.jalo.Stable;
+import it.cocacola.championship.jalo.StableEntry;
+import it.cocacola.championship.jalo.StableRanking;
 import it.cocacola.championship.jalo.Vehicle;
 import java.util.HashMap;
 import java.util.Map;
@@ -72,6 +76,58 @@ public abstract class GeneratedChampionshipManager extends Extension
 	public Driver createDriver(final Map attributeValues)
 	{
 		return createDriver( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public DriverEntry createDriverEntry(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( ChampionshipConstants.TC.DRIVERENTRY );
+			return (DriverEntry)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating DriverEntry : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public DriverEntry createDriverEntry(final Map attributeValues)
+	{
+		return createDriverEntry( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public DriverRanking createDriverRanking(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( ChampionshipConstants.TC.DRIVERRANKING );
+			return (DriverRanking)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating DriverRanking : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public DriverRanking createDriverRanking(final Map attributeValues)
+	{
+		return createDriverRanking( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public GranPrix createGranPrix(final SessionContext ctx, final Map attributeValues)
@@ -176,6 +232,58 @@ public abstract class GeneratedChampionshipManager extends Extension
 	public Stable createStable(final Map attributeValues)
 	{
 		return createStable( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public StableEntry createStableEntry(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( ChampionshipConstants.TC.STABLEENTRY );
+			return (StableEntry)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating StableEntry : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public StableEntry createStableEntry(final Map attributeValues)
+	{
+		return createStableEntry( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public StableRanking createStableRanking(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( ChampionshipConstants.TC.STABLERANKING );
+			return (StableRanking)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating StableRanking : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public StableRanking createStableRanking(final Map attributeValues)
+	{
+		return createStableRanking( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public Vehicle createVehicle(final SessionContext ctx, final Map attributeValues)
