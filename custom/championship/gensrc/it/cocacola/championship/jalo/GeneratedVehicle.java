@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 1.15.10                          ---
+ * --- Generated at 4-mag-2017 16.58.17                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -27,10 +27,12 @@ public abstract class GeneratedVehicle extends GenericItem
 	public static final String NAME = "name";
 	/** Qualifier of the <code>Vehicle.type</code> attribute **/
 	public static final String TYPE = "type";
+	/** Qualifier of the <code>Vehicle.number</code> attribute **/
+	public static final String NUMBER = "number";
 	/** Qualifier of the <code>Vehicle.hp</code> attribute **/
 	public static final String HP = "hp";
-	/** Qualifier of the <code>Vehicle.EngineSize</code> attribute **/
-	public static final String ENGINESIZE = "EngineSize";
+	/** Qualifier of the <code>Vehicle.engineSize</code> attribute **/
+	public static final String ENGINESIZE = "engineSize";
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
@@ -38,6 +40,7 @@ public abstract class GeneratedVehicle extends GenericItem
 		tmp.put(CODE, AttributeMode.INITIAL);
 		tmp.put(NAME, AttributeMode.INITIAL);
 		tmp.put(TYPE, AttributeMode.INITIAL);
+		tmp.put(NUMBER, AttributeMode.INITIAL);
 		tmp.put(HP, AttributeMode.INITIAL);
 		tmp.put(ENGINESIZE, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
@@ -85,8 +88,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Vehicle.EngineSize</code> attribute.
-	 * @return the EngineSize - Engine Size
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.engineSize</code> attribute.
+	 * @return the engineSize - Engine Size
 	 */
 	public Integer getEngineSize(final SessionContext ctx)
 	{
@@ -94,8 +97,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Vehicle.EngineSize</code> attribute.
-	 * @return the EngineSize - Engine Size
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.engineSize</code> attribute.
+	 * @return the engineSize - Engine Size
 	 */
 	public Integer getEngineSize()
 	{
@@ -103,8 +106,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @return the EngineSize - Engine Size
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @return the engineSize - Engine Size
 	 */
 	public int getEngineSizeAsPrimitive(final SessionContext ctx)
 	{
@@ -113,8 +116,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Getter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @return the EngineSize - Engine Size
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @return the engineSize - Engine Size
 	 */
 	public int getEngineSizeAsPrimitive()
 	{
@@ -122,8 +125,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @param value the EngineSize - Engine Size
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @param value the engineSize - Engine Size
 	 */
 	public void setEngineSize(final SessionContext ctx, final Integer value)
 	{
@@ -131,8 +134,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @param value the EngineSize - Engine Size
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @param value the engineSize - Engine Size
 	 */
 	public void setEngineSize(final Integer value)
 	{
@@ -140,8 +143,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @param value the EngineSize - Engine Size
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @param value the engineSize - Engine Size
 	 */
 	public void setEngineSize(final SessionContext ctx, final int value)
 	{
@@ -149,8 +152,8 @@ public abstract class GeneratedVehicle extends GenericItem
 	}
 	
 	/**
-	 * <i>Generated method</i> - Setter of the <code>Vehicle.EngineSize</code> attribute. 
-	 * @param value the EngineSize - Engine Size
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.engineSize</code> attribute. 
+	 * @param value the engineSize - Engine Size
 	 */
 	public void setEngineSize(final int value)
 	{
@@ -264,6 +267,79 @@ public abstract class GeneratedVehicle extends GenericItem
 	public void setName(final String value)
 	{
 		setName( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.number</code> attribute.
+	 * @return the number - Number
+	 */
+	public Integer getNumber(final SessionContext ctx)
+	{
+		return (Integer)getProperty( ctx, NUMBER);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.number</code> attribute.
+	 * @return the number - Number
+	 */
+	public Integer getNumber()
+	{
+		return getNumber( getSession().getSessionContext() );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.number</code> attribute. 
+	 * @return the number - Number
+	 */
+	public int getNumberAsPrimitive(final SessionContext ctx)
+	{
+		Integer value = getNumber( ctx );
+		return value != null ? value.intValue() : 0;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Vehicle.number</code> attribute. 
+	 * @return the number - Number
+	 */
+	public int getNumberAsPrimitive()
+	{
+		return getNumberAsPrimitive( getSession().getSessionContext() );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.number</code> attribute. 
+	 * @param value the number - Number
+	 */
+	public void setNumber(final SessionContext ctx, final Integer value)
+	{
+		setProperty(ctx, NUMBER,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.number</code> attribute. 
+	 * @param value the number - Number
+	 */
+	public void setNumber(final Integer value)
+	{
+		setNumber( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.number</code> attribute. 
+	 * @param value the number - Number
+	 */
+	public void setNumber(final SessionContext ctx, final int value)
+	{
+		setNumber( ctx,Integer.valueOf( value ) );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Vehicle.number</code> attribute. 
+	 * @param value the number - Number
+	 */
+	public void setNumber(final int value)
+	{
+		setNumber( getSession().getSessionContext(), value );
 	}
 	
 	/**

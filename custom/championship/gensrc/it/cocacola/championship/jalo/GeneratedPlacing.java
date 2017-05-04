@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 1.15.10                          ---
+ * --- Generated at 4-mag-2017 16.58.17                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -33,10 +33,10 @@ public abstract class GeneratedPlacing extends GenericItem
 	public static final String TIME = "time";
 	/** Qualifier of the <code>Placing.position</code> attribute **/
 	public static final String POSITION = "position";
-	/** Qualifier of the <code>Placing.granPrix</code> attribute **/
-	public static final String GRANPRIX = "granPrix";
 	/** Qualifier of the <code>Placing.driver</code> attribute **/
 	public static final String DRIVER = "driver";
+	/** Qualifier of the <code>Placing.granPrix</code> attribute **/
+	public static final String GRANPRIX = "granPrix";
 	/**
 	* {@link BidirectionalOneToManyHandler} for handling 1:n GRANPRIX's relation attributes from 'one' side.
 	**/
@@ -49,18 +49,6 @@ public abstract class GeneratedPlacing extends GenericItem
 	true,
 	CollectionType.COLLECTION
 	);
-	/**
-	* {@link BidirectionalOneToManyHandler} for handling 1:n DRIVER's relation attributes from 'one' side.
-	**/
-	protected static final BidirectionalOneToManyHandler<GeneratedPlacing> DRIVERHANDLER = new BidirectionalOneToManyHandler<GeneratedPlacing>(
-	ChampionshipConstants.TC.PLACING,
-	false,
-	"driver",
-	null,
-	false,
-	true,
-	CollectionType.COLLECTION
-	);
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
@@ -68,8 +56,8 @@ public abstract class GeneratedPlacing extends GenericItem
 		tmp.put(CODE, AttributeMode.INITIAL);
 		tmp.put(TIME, AttributeMode.INITIAL);
 		tmp.put(POSITION, AttributeMode.INITIAL);
-		tmp.put(GRANPRIX, AttributeMode.INITIAL);
 		tmp.put(DRIVER, AttributeMode.INITIAL);
+		tmp.put(GRANPRIX, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
 	@Override
@@ -118,13 +106,12 @@ public abstract class GeneratedPlacing extends GenericItem
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException
 	{
 		GRANPRIXHANDLER.newInstance(ctx, allAttributes);
-		DRIVERHANDLER.newInstance(ctx, allAttributes);
 		return super.createItem( ctx, type, allAttributes );
 	}
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>Placing.driver</code> attribute.
-	 * @return the driver
+	 * @return the driver - Driver
 	 */
 	public Driver getDriver(final SessionContext ctx)
 	{
@@ -133,7 +120,7 @@ public abstract class GeneratedPlacing extends GenericItem
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>Placing.driver</code> attribute.
-	 * @return the driver
+	 * @return the driver - Driver
 	 */
 	public Driver getDriver()
 	{
@@ -142,16 +129,16 @@ public abstract class GeneratedPlacing extends GenericItem
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>Placing.driver</code> attribute. 
-	 * @param value the driver
+	 * @param value the driver - Driver
 	 */
 	public void setDriver(final SessionContext ctx, final Driver value)
 	{
-		DRIVERHANDLER.addValue( ctx, value, this  );
+		setProperty(ctx, DRIVER,value);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>Placing.driver</code> attribute. 
-	 * @param value the driver
+	 * @param value the driver - Driver
 	 */
 	public void setDriver(final Driver value)
 	{
@@ -271,44 +258,25 @@ public abstract class GeneratedPlacing extends GenericItem
 	 * <i>Generated method</i> - Getter of the <code>Placing.time</code> attribute.
 	 * @return the time - Time
 	 */
-	public Integer getTime(final SessionContext ctx)
+	public String getTime(final SessionContext ctx)
 	{
-		return (Integer)getProperty( ctx, TIME);
+		return (String)getProperty( ctx, TIME);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>Placing.time</code> attribute.
 	 * @return the time - Time
 	 */
-	public Integer getTime()
+	public String getTime()
 	{
 		return getTime( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Placing.time</code> attribute. 
-	 * @return the time - Time
-	 */
-	public int getTimeAsPrimitive(final SessionContext ctx)
-	{
-		Integer value = getTime( ctx );
-		return value != null ? value.intValue() : 0;
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Placing.time</code> attribute. 
-	 * @return the time - Time
-	 */
-	public int getTimeAsPrimitive()
-	{
-		return getTimeAsPrimitive( getSession().getSessionContext() );
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>Placing.time</code> attribute. 
 	 * @param value the time - Time
 	 */
-	public void setTime(final SessionContext ctx, final Integer value)
+	public void setTime(final SessionContext ctx, final String value)
 	{
 		setProperty(ctx, TIME,value);
 	}
@@ -317,25 +285,7 @@ public abstract class GeneratedPlacing extends GenericItem
 	 * <i>Generated method</i> - Setter of the <code>Placing.time</code> attribute. 
 	 * @param value the time - Time
 	 */
-	public void setTime(final Integer value)
-	{
-		setTime( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Placing.time</code> attribute. 
-	 * @param value the time - Time
-	 */
-	public void setTime(final SessionContext ctx, final int value)
-	{
-		setTime( ctx,Integer.valueOf( value ) );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Placing.time</code> attribute. 
-	 * @param value the time - Time
-	 */
-	public void setTime(final int value)
+	public void setTime(final String value)
 	{
 		setTime( getSession().getSessionContext(), value );
 	}

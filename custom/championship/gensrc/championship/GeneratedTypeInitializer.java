@@ -124,21 +124,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			true
 		);
 	
-		createRelationType(
-			"DriverPlacingRelation",
-			null,
-			true
-		);
-	
 		createEnumerationType(
 			"TypeEnum",
 			null
-		);
-	
-		createCollectionType(
-			"DriverList",
-			"Driver",
-			CollectionType.LIST
 		);
 	
 	}
@@ -160,9 +148,11 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Vehicle_type();
 			
+				single_createattr_Vehicle_number();
+			
 				single_createattr_Vehicle_hp();
 			
-				single_createattr_Vehicle_EngineSize();
+				single_createattr_Vehicle_engineSize();
 			
 				single_createattr_Stable_code();
 			
@@ -170,7 +160,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Stable_nation();
 			
-				single_createattr_Stable_drivers();
+				single_createattr_Stable_firstVehicle();
+			
+				single_createattr_Stable_secondVehicle();
 			
 				single_createattr_GranPrix_code();
 			
@@ -193,6 +185,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				single_createattr_Placing_time();
 			
 				single_createattr_Placing_position();
+			
+				single_createattr_Placing_driver();
 			
 				single_createattr_Driver_code();
 			
@@ -266,26 +260,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			CollectionType.COLLECTION
 		);
 	
-		createRelationAttributes(
-			"DriverPlacingRelation", 
-			false, 
-
-			"driver", 
-			"Driver", 
-			true,
-			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
-			false,
-			false,
-			CollectionType.COLLECTION,
-			"placings", 
-			"Placing", 
-			true,
-			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
-			true,
-			false,
-			CollectionType.COLLECTION
-		);
-	
 
 	}
 
@@ -341,6 +315,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_Vehicle_number() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Vehicle", 
+					"number",  
+					null,
+					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
 	public void single_createattr_Vehicle_hp() throws JaloBusinessException
 	{
 		
@@ -358,14 +349,14 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_Vehicle_EngineSize() throws JaloBusinessException
+	public void single_createattr_Vehicle_engineSize() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
 					"Vehicle", 
-					"EngineSize",  
+					"engineSize",  
 					null,
 					"java.lang.Integer",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
@@ -426,16 +417,33 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_Stable_drivers() throws JaloBusinessException
+	public void single_createattr_Stable_firstVehicle() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
 					"Stable", 
-					"drivers",  
+					"firstVehicle",  
 					null,
-					"DriverList",
+					"Vehicle",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Stable_secondVehicle() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Stable", 
+					"secondVehicle",  
+					null,
+					"Vehicle",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -503,7 +511,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"GranPrix", 
 					"date",  
 					null,
-					"java.lang.String",
+					"java.util.Date",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -605,7 +613,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"Placing", 
 					"time",  
 					null,
-					"java.lang.Integer",
+					"java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -623,6 +631,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"position",  
 					null,
 					"java.lang.Integer",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Placing_driver() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Placing", 
+					"driver",  
+					null,
+					"Driver",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -759,15 +784,11 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 		single_setRelAttributeProperties_PlacingGranPrixRelation_source();
 	
-		single_setRelAttributeProperties_DriverPlacingRelation_source();
-	
 		single_setRelAttributeProperties_RaceGranPrixRelation_target();
 	
 		single_setRelAttributeProperties_RaceDriverRelation_target();
 	
 		single_setRelAttributeProperties_PlacingGranPrixRelation_target();
-	
-		single_setRelAttributeProperties_DriverPlacingRelation_target();
 	
 		connectRelation(
 			"RaceGranPrixRelation", 
@@ -814,21 +835,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			true
 		);
 	
-		connectRelation(
-			"DriverPlacingRelation", 
-			false, 
-			"driver", 
-			"Driver", 
-			true,
-			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
-			"placings", 
-			"Placing", 
-			true,
-			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
-			true,
-			true
-		);
-	
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -848,9 +854,11 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_Vehicle_type();
 		
+			single_setAttributeProperties_Vehicle_number();
+		
 			single_setAttributeProperties_Vehicle_hp();
 		
-			single_setAttributeProperties_Vehicle_EngineSize();
+			single_setAttributeProperties_Vehicle_engineSize();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -871,7 +879,9 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_Stable_nation();
 		
-			single_setAttributeProperties_Stable_drivers();
+			single_setAttributeProperties_Stable_firstVehicle();
+		
+			single_setAttributeProperties_Stable_secondVehicle();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -934,6 +944,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_Placing_position();
 		
+			single_setAttributeProperties_Placing_driver();
+		
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -959,13 +971,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_Driver_vehicle();
 		
-				setDefaultProperties(
-					"DriverList",
-					true,
-					true,
-					null
-				);
-			
 				setDefaultProperties(
 					"TypeEnum",
 					true,
@@ -1043,6 +1048,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
+						public void single_setAttributeProperties_Vehicle_number() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Vehicle", 
+								"number",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
 						public void single_setAttributeProperties_Vehicle_hp() throws JaloBusinessException
 						{
 							
@@ -1065,7 +1092,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_Vehicle_EngineSize() throws JaloBusinessException
+						public void single_setAttributeProperties_Vehicle_engineSize() throws JaloBusinessException
 						{
 							
 							
@@ -1074,7 +1101,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							
 							setAttributeProperties(
 								"Vehicle", 
-								"EngineSize",
+								"engineSize",
 								false, 
 								null,
 								null,
@@ -1153,7 +1180,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_Stable_drivers() throws JaloBusinessException
+						public void single_setAttributeProperties_Stable_firstVehicle() throws JaloBusinessException
 						{
 							
 							
@@ -1162,7 +1189,29 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							
 							setAttributeProperties(
 								"Stable", 
-								"drivers",
+								"firstVehicle",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Stable_secondVehicle() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Stable", 
+								"secondVehicle",
 								false, 
 								null,
 								null,
@@ -1405,6 +1454,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							setAttributeProperties(
 								"Placing", 
 								"position",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Placing_driver() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Placing", 
+								"driver",
 								false, 
 								null,
 								null,
@@ -1662,48 +1733,6 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 
 									setAttributeProperties(
 										"GranPrix", 
-										"placings",
-										false, 
-										null,
-										null,
-										null,
-										true,
-										true,
-										null,
-										customPropsMap,
-										null
-									);
-								}
-							
-								public void single_setRelAttributeProperties_DriverPlacingRelation_source() throws JaloBusinessException
-								{
-									
-									Map customPropsMap = new HashMap();
-									
-
-									setAttributeProperties(
-										"Placing", 
-										"driver",
-										false, 
-										null,
-										null,
-										null,
-										true,
-										true,
-										null,
-										customPropsMap,
-										null
-									);
-								}
-							
-								public void single_setRelAttributeProperties_DriverPlacingRelation_target() throws JaloBusinessException
-								{
-									
-									Map customPropsMap = new HashMap();
-									
-
-									setAttributeProperties(
-										"Driver", 
 										"placings",
 										false, 
 										null,

@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 1.15.10                          ---
+ * --- Generated at 4-mag-2017 16.58.17                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -20,6 +20,7 @@ import it.cocacola.championship.jalo.Placing;
 import it.cocacola.championship.jalo.RaceChampionship;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -130,36 +131,36 @@ public abstract class GeneratedGranPrix extends GenericItem
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>GranPrix.date</code> attribute.
-	 * @return the date - Laps
+	 * @return the date - Date
 	 */
-	public String getDate(final SessionContext ctx)
+	public Date getDate(final SessionContext ctx)
 	{
-		return (String)getProperty( ctx, DATE);
+		return (Date)getProperty( ctx, DATE);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>GranPrix.date</code> attribute.
-	 * @return the date - Laps
+	 * @return the date - Date
 	 */
-	public String getDate()
+	public Date getDate()
 	{
 		return getDate( getSession().getSessionContext() );
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>GranPrix.date</code> attribute. 
-	 * @param value the date - Laps
+	 * @param value the date - Date
 	 */
-	public void setDate(final SessionContext ctx, final String value)
+	public void setDate(final SessionContext ctx, final Date value)
 	{
 		setProperty(ctx, DATE,value);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>GranPrix.date</code> attribute. 
-	 * @param value the date - Laps
+	 * @param value the date - Date
 	 */
-	public void setDate(final String value)
+	public void setDate(final Date value)
 	{
 		setDate( getSession().getSessionContext(), value );
 	}

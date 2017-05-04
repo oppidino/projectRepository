@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 1.15.10                          ---
+ * --- Generated at 4-mag-2017 16.58.17                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.constants;
@@ -38,7 +38,6 @@ public class GeneratedChampionshipConstants
 	}
 	public static class Relations
 	{
-		public static final String DRIVERPLACINGRELATION = "DriverPlacingRelation".intern();
 		public static final String PLACINGGRANPRIXRELATION = "PlacingGranPrixRelation".intern();
 		public static final String RACEDRIVERRELATION = "RaceDriverRelation".intern();
 		public static final String RACEGRANPRIXRELATION = "RaceGranPrixRelation".intern();

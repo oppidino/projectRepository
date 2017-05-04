@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 1.15.10                          ---
+ * --- Generated at 4-mag-2017 16.58.17                         ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championship.jalo;
@@ -14,12 +14,9 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.util.BidirectionalOneToManyHandler;
-import de.hybris.platform.util.OneToManyHandler;
 import it.cocacola.championship.constants.ChampionshipConstants;
-import it.cocacola.championship.jalo.Placing;
 import it.cocacola.championship.jalo.RaceChampionship;
 import it.cocacola.championship.jalo.Vehicle;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,8 +41,6 @@ public abstract class GeneratedDriver extends GenericItem
 	public static final String VEHICLE = "vehicle";
 	/** Qualifier of the <code>Driver.raceChampionship</code> attribute **/
 	public static final String RACECHAMPIONSHIP = "raceChampionship";
-	/** Qualifier of the <code>Driver.placings</code> attribute **/
-	public static final String PLACINGS = "placings";
 	/**
 	* {@link BidirectionalOneToManyHandler} for handling 1:n RACECHAMPIONSHIP's relation attributes from 'one' side.
 	**/
@@ -53,18 +48,6 @@ public abstract class GeneratedDriver extends GenericItem
 	ChampionshipConstants.TC.DRIVER,
 	false,
 	"raceChampionship",
-	null,
-	false,
-	true,
-	CollectionType.COLLECTION
-	);
-	/**
-	* {@link OneToManyHandler} for handling 1:n PLACINGS's relation attributes from 'many' side.
-	**/
-	protected static final OneToManyHandler<Placing> PLACINGSHANDLER = new OneToManyHandler<Placing>(
-	ChampionshipConstants.TC.PLACING,
-	false,
-	"driver",
 	null,
 	false,
 	true,
@@ -275,78 +258,6 @@ public abstract class GeneratedDriver extends GenericItem
 	public void setNationality(final String value)
 	{
 		setNationality( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Driver.placings</code> attribute.
-	 * @return the placings
-	 */
-	public Collection<Placing> getPlacings(final SessionContext ctx)
-	{
-		return PLACINGSHANDLER.getValues( ctx, this );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Driver.placings</code> attribute.
-	 * @return the placings
-	 */
-	public Collection<Placing> getPlacings()
-	{
-		return getPlacings( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Driver.placings</code> attribute. 
-	 * @param value the placings
-	 */
-	public void setPlacings(final SessionContext ctx, final Collection<Placing> value)
-	{
-		PLACINGSHANDLER.setValues( ctx, this, value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Driver.placings</code> attribute. 
-	 * @param value the placings
-	 */
-	public void setPlacings(final Collection<Placing> value)
-	{
-		setPlacings( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Adds <code>value</code> to placings. 
-	 * @param value the item to add to placings
-	 */
-	public void addToPlacings(final SessionContext ctx, final Placing value)
-	{
-		PLACINGSHANDLER.addValue( ctx, this, value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Adds <code>value</code> to placings. 
-	 * @param value the item to add to placings
-	 */
-	public void addToPlacings(final Placing value)
-	{
-		addToPlacings( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Removes <code>value</code> from placings. 
-	 * @param value the item to remove from placings
-	 */
-	public void removeFromPlacings(final SessionContext ctx, final Placing value)
-	{
-		PLACINGSHANDLER.removeValue( ctx, this, value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Removes <code>value</code> from placings. 
-	 * @param value the item to remove from placings
-	 */
-	public void removeFromPlacings(final Placing value)
-	{
-		removeFromPlacings( getSession().getSessionContext(), value );
 	}
 	
 	/**

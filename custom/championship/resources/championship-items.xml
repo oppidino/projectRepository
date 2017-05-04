@@ -19,10 +19,6 @@
 <items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			xsi:noNamespaceSchemaLocation="items.xsd">
 			
-		<collectiontypes>
-			<collectiontype code="DriverList" elementtype="Driver" autocreate="true" type="list"/>
-		</collectiontypes>
-		
 		<enumtypes>
 	        <enumtype code="TypeEnum" autocreate="true" generate="true" dynamic="false">
 	            <value code="CAR"/>
@@ -43,10 +39,6 @@
 		       <sourceElement type="GranPrix" qualifier="granPrix" cardinality="one" />
 		       <targetElement type="Placing" qualifier="placings" cardinality="many"/>
 		    </relation>
-		    <relation code="DriverPlacingRelation" localized="false" generate="true" autocreate="true">
-		       <sourceElement type="Driver" qualifier="driver" cardinality="one" />
-		       <targetElement type="Placing" qualifier="placings" cardinality="many"/>
-		    </relation>
 		</relations>
 		
 		<itemtypes>
@@ -65,11 +57,15 @@
     					<persistence type="property"/>
     					<defaultvalue>em().getEnumerationValue("TypeEnum","CAR")</defaultvalue>
 					</attribute>
+					<attribute qualifier="number" type="java.lang.Integer">
+	                    <description>Number</description>
+	                    <persistence type="property" />
+	                </attribute>
 	                <attribute qualifier="hp" type="java.lang.Integer">
 	                    <description>Horse Power</description>
 	                    <persistence type="property" />
 	                </attribute>
-	                <attribute qualifier="EngineSize" type="java.lang.Integer">
+	                <attribute qualifier="engineSize" type="java.lang.Integer">
 	                    <description>Engine Size</description>
 	                    <persistence type="property" />
 	                </attribute>
@@ -91,8 +87,12 @@
 	                    <description>Nation</description>
 	                    <persistence type="property" />
 	                </attribute>
-	                <attribute qualifier="drivers" type="DriverList">
-	                    <description>Driver Team</description>
+	                <attribute qualifier="firstVehicle" type="Vehicle">
+	                    <description>First Vehicle Team</description>
+	                    <persistence type="property" />
+	                </attribute>
+	                <attribute qualifier="secondVehicle" type="Vehicle">
+	                    <description>Second Vehicle Team</description>
 	                    <persistence type="property" />
 	                </attribute>
 	            </attributes>
@@ -113,8 +113,8 @@
 	                    <description>Laps</description>
 	                    <persistence type="property" />
 	                </attribute>
-	                <attribute qualifier="date" type="java.lang.String">
-	                    <description>Laps</description>
+	                <attribute qualifier="date" type="java.util.Date">
+	                    <description>Date</description>
 	                    <persistence type="property" />
 	                </attribute>
 	                <attribute qualifier="nation" type="java.lang.String">
@@ -149,12 +149,16 @@
 	                    <persistence type="property"/>
 	                    <modifiers optional="false" unique="true"/>
 	                </attribute>
-					<attribute qualifier="time" type="java.lang.Integer">
+					<attribute qualifier="time" type="java.lang.String">
 	                    <description>Time</description>
 	                    <persistence type="property" />
 	                </attribute>
 	                <attribute qualifier="position" type="java.lang.Integer">
 	                    <description>Position</description>
+	                    <persistence type="property" />
+	                </attribute>
+	                <attribute qualifier="driver" type="Driver">
+	                    <description>Driver</description>
 	                    <persistence type="property" />
 	                </attribute>
 	            </attributes>
