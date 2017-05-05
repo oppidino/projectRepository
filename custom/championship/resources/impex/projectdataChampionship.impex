@@ -54,29 +54,6 @@ INSERT_UPDATE Stable	;code[unique=true]	;name					;nation			;firstVehicle(code)	
 						;9					;Team Suzuki Ecstar		;Japan			;17					;18
 						;10					;Monster Yamaha Tech 3	;Japan			;19					;20
 
-INSERT_UPDATE GranPrix	;code[unique=true]	;name						;laps	;date[dateformat=yyyy-MM-dd HH:mm]	;nation 			;placing(code)
-						;1					;Gran Premio di Monza		;58		;2017-08-05 14:00					;Italy				;1,2,3,4,5,6,7,8,9,10
-						;2					;SPA Francochamps			;47		;2017-07-27 14:00					;Belgium			;11,12,13,14,15,16,17,18,19,20
-						;3					;Albert Park Melbourne		;67		;2017-02-14 14:00					;Australia			;21,22,23,24,25,26,27,28,29,30
-						;4					;Nurburgring				;72		;2017-05-18 14:00					;Germany			;31,32,33,34,35,36,37,38,39,40
-						;5					;Gran Prix de Barcelona		;78		;2017-04-07 14:00					;Spain				;41,42,43,44,45,46,47,48,49,50
-						;6					;Silverstone				;69		;2017-06-21 14:00					;Great Britain		;51,52,53,54,55,56,57,58,59,60
-						;7					;Suzuka						;54		;2017-09-10 14:00					;Japan				;61,62,63,64,65,66,67,68,69,70
-						;8					;A1 Ring Spielberg			;76		;2017-05-28 14:00					;Australia 			;71,72,73,74,75,76,77,78,79,80
-						;9					;Grand Prix de Monte Carlo	;78		;2017-04-21 14:00					;Monaco				;81,82,83,84,85,86,87,88,89,90
-						;10					;Hungaroring				;71		;2017-05-10 14:00					;Hungary			;91,92,93,94,95,96,97,98,99,100
-						;11					;Mugello					;24		;2017-05-04 14:00					;Italy				;101,102,103,104,105,106,107,108,109,110
-						;12					;Le Mans					;23		;2017-05-11 14:00					;France				;111,112,113,114,115,116,117,118,119,120
-						;13					;Laguna Seca				;25		;2017-07-15 14:00					;United States		;121,122,123,124,125,126,127,128,129,130
-						;14					;Jerez de la Frontera		;27		;2017-04-12 14:00					;Spain				;131,132,133,134,135,136,137,138,139,140
-						;15					;Brno						;22		;2017-07-28 14:00					;Czech Republic		;141,142,143,144,145,146,147,148,149,150
-						;16					;Aragon GP					;28		;2017-08-15 14:00					;Spain				;151,152,153,154,155,156,157,158,159,160
-						;17					;Phillip Island				;26		;2017-10-22 14:00					;Australia			;161,162,163,164,165,166,167,168,169,170
-						;18					;Donington					;23		;2017-03-21 14:00					;Great Britain		;171,172,173,174,175,176,177,178,179,180
-						;19					;Termas de Rio Hondo		;26		;2017-03-12 14:00					;Argentina			;181,182,183,184,185,186,187,188,189,190
-						;20					;Assen						;20		;2017-04-01 14:00					;Netherlands		;191,192,193,194,195,196,197,198,199,200
-
-
 INSERT_UPDATE Placing	;code[unique=true]	;driver(code)	;time			;position
 						;1					;1				;1h 38m 45s		;1
 						;2					;2				;+5s			;2
@@ -279,6 +256,28 @@ INSERT_UPDATE Placing	;code[unique=true]	;driver(code)	;time			;position
 						;199				;20				;+1Lap			;9
 						;200				;15				;Retired		;10
 
-INSERT_UPDATE RaceChampionship	;code[unique=true]	;type(code)	;name							;drivers(code)						granPrix(code)
+INSERT_UPDATE GranPrix	;code[unique=true]	;name						;laps	;date[dateformat=yyyy-MM-dd HH:mm]	;nation 			;placings(code)
+						;1					;Gran Premio di Monza		;58		;2017-08-05 14:00					;Italy				;1,2,3,4,5,6,7,8,9,10
+						;2					;SPA Francochamps			;47		;2017-07-27 14:00					;Belgium			;11,12,13,14,15,16,17,18,19,20
+						;3					;Albert Park Melbourne		;67		;2017-02-14 14:00					;Australia			;21,22,23,24,25,26,27,28,29,30
+						;4					;Nurburgring				;72		;2017-05-18 14:00					;Germany			;31,32,33,34,35,36,37,38,39,40
+						;5					;Gran Prix de Barcelona		;78		;2017-04-07 14:00					;Spain				;41,42,43,44,45,46,47,48,49,50
+						;6					;Silverstone				;69		;2017-06-21 14:00					;Great Britain		;51,52,53,54,55,56,57,58,59,60
+						;7					;Suzuka						;54		;2017-09-10 14:00					;Japan				;61,62,63,64,65,66,67,68,69,70
+						;8					;A1 Ring Spielberg			;76		;2017-05-28 14:00					;Australia 			;71,72,73,74,75,76,77,78,79,80
+						;9					;Grand Prix de Monte Carlo	;78		;2017-04-21 14:00					;Monaco				;81,82,83,84,85,86,87,88,89,90
+						;10					;Hungaroring				;71		;2017-05-10 14:00					;Hungary			;91,92,93,94,95,96,97,98,99,100
+						;11					;Mugello					;24		;2017-05-04 14:00					;Italy				;101,102,103,104,105,106,107,108,109,110
+						;12					;Le Mans					;23		;2017-05-11 14:00					;France				;111,112,113,114,115,116,117,118,119,120
+						;13					;Laguna Seca				;25		;2017-07-15 14:00					;United States		;121,122,123,124,125,126,127,128,129,130
+						;14					;Jerez de la Frontera		;27		;2017-04-12 14:00					;Spain				;131,132,133,134,135,136,137,138,139,140
+						;15					;Brno						;22		;2017-07-28 14:00					;Czech Republic		;141,142,143,144,145,146,147,148,149,150
+						;16					;Aragon GP					;28		;2017-08-15 14:00					;Spain				;151,152,153,154,155,156,157,158,159,160
+						;17					;Phillip Island				;26		;2017-10-22 14:00					;Australia			;161,162,163,164,165,166,167,168,169,170
+						;18					;Donington					;23		;2017-03-21 14:00					;Great Britain		;171,172,173,174,175,176,177,178,179,180
+						;19					;Termas de Rio Hondo		;26		;2017-03-12 14:00					;Argentina			;181,182,183,184,185,186,187,188,189,190
+						;20					;Assen						;20		;2017-04-01 14:00					;Netherlands		;191,192,193,194,195,196,197,198,199,200
+
+INSERT_UPDATE RaceChampionship	;code[unique=true]	;type(code)	;name							;drivers(code)						;granPrix(code)
 								;1					;CAR		;Formula 1 World Championship 	;1,2,3,4,5,6,7,8,9,10				;1,2,3,4,5,6,7,8,9,10
 								;2					;MOTO		;MotoGP World Championship 		;11,12,13,14,15,16,17,18,19,20		;11,12,13,14,15,16,17,18,19,20

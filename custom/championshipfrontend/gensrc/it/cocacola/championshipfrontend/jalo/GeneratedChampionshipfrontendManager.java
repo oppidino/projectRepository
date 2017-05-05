@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 23.00.27                         ---
+ * --- Generated at 5-mag-2017 3.30.08                          ---
  * ----------------------------------------------------------------
  */
 package it.cocacola.championshipfrontend.jalo;
