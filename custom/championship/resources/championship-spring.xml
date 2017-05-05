@@ -20,7 +20,17 @@
            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
            
     <context:component-scan base-package="it.cocacola.championship"/>
-
+    
+    <bean id="assignDateGrandPrixInterceptor" 
+   class="it.cocacola.championship.interceptors.AssignDateGrandPrixInterceptor">
+   </bean>
+   
+   <bean id="recipeTimePrepareMapping"
+   class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+   	<property name="interceptor" ref="assignDateGrandPrixInterceptor" />
+   	<property name="typeCode" value="GranPrix" />
+   </bean>
+    
 	<alias name="defaultGranPrixService" alias="granPrixService"/>
     <bean id="defaultGranPrixService" class="it.cocacola.championship.services.impl.DefaultGranPrixService">
         <property name="granPrixDAO" ref="granPrixDAO"/>
